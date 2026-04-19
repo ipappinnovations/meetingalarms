@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Meeting Alarm</title>
+  <meta name="description" content="Get help with Meeting Alarm. Contact us or browse common questions." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue-dark:  #003CB4;
+      --blue-mid:   #0064E6;
+      --blue-light: #28A0FF;
+      --text:       #1a1a2e;
+      --subtle:     #f5f7ff;
+      --border:     #e2e8f0;
+      --white:      #ffffff;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      background: linear-gradient(160deg, var(--blue-dark) 0%, var(--blue-light) 100%);
+      padding: 20px 24px;
+    }
+
+    .topbar a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .topbar a:hover { color: #fff; }
+
+    /* ── Content ── */
+    .content {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 12px;
+    }
+
+    .content > p.lead {
+      font-size: 1.05rem;
+      color: #4a5568;
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
+      border-radius: 16px;
+      padding: 28px 28px;
+      margin-bottom: 56px;
+      color: #fff;
+    }
+
+    .contact-card .icon {
+      font-size: 2.4rem;
+      flex-shrink: 0;
+    }
+
+    .contact-card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .contact-card p {
+      font-size: 0.925rem;
+      opacity: 0.85;
+      margin-bottom: 14px;
+    }
+
+    .contact-card a.btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--blue-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .contact-card a.btn:hover { opacity: 0.88; }
+
+    /* ── FAQ ── */
+    .content h2.section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 24px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--subtle);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+    }
+
+    .faq-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--blue-dark);
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #4a5568;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      background: var(--subtle);
+      border-top: 1px solid var(--border);
+      font-size: 0.875rem;
+      color: #718096;
+    }
+
+    footer a {
+      color: var(--blue-mid);
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a href="../">← Meeting Alarm</a>
+  </div>
+
+  <div class="content">
+
+    <h1>Support</h1>
+    <p class="lead">
+      Having trouble with Meeting Alarm? We're happy to help.
+      Reach out by email and we'll get back to you as soon as we can.
+    </p>
+
+    <!-- Contact card -->
+    <div class="contact-card">
+      <div class="icon">📬</div>
+      <div>
+        <h2>Get in touch</h2>
+        <p>Email us and we'll respond within 1–2 business days.</p>
+        <a class="btn" href="mailto:ipappinnovations@gmail.com">ipappinnovations@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="section-title">Common questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <h3>The alarm didn't ring — what happened?</h3>
+        <p>
+          Make sure you've granted <strong>Calendar access</strong> and
+          <strong>Notification permissions</strong> to Meeting Alarm in iOS
+          Settings. If you're using an iPhone without AlarmKit support, the
+          app falls back to standard notifications — these can be silenced by
+          Focus or Silent mode. AlarmKit alarms require a physical device
+          running iOS 26.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I set different lead times per meeting?</h3>
+        <p>
+          Yes. Tap a meeting to open its detail view, then adjust the
+          pre-meeting alert time for that specific occurrence. The global
+          default lives in Settings.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I arm an entire recurring series at once?</h3>
+        <p>
+          Tap the bell icon on any occurrence of a recurring meeting. A sheet
+          will appear asking whether you want to alarm just this occurrence or
+          the whole series. Choose <strong>All future occurrences</strong>.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Why doesn't a Join button appear for my meeting?</h3>
+        <p>
+          The Join button appears when Meeting Alarm detects a supported
+          video-conference URL (Zoom, Teams, Google Meet, Webex, Whereby,
+          GoTo Meeting) in the event's URL, location, or notes field.
+          If the link is missing from your calendar event, the button won't
+          show. You can add the URL by editing the event in your calendar app.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does Meeting Alarm send my calendar data anywhere?</h3>
+        <p>
+          No. Everything is processed on your device. See our
+          <a href="../privacy/" style="color:var(--blue-mid);font-weight:600;">Privacy Policy</a>
+          for full details.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I delete all my alarms?</h3>
+        <p>
+          In the meeting list, tap the bell icon on each armed meeting to
+          disarm it. Deleting and reinstalling the app will also clear all
+          alarm records from the local database.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="../">Home</a>
+    <a href="../privacy/">Privacy Policy</a>
+    <a href="mailto:ipappinnovations@gmail.com">Contact</a>
+    <br /><br />
+    &copy; 2026 IP App Innovations
+  </footer>
+
+</body>
+</html>
